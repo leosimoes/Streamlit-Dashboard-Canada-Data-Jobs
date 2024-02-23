@@ -165,7 +165,7 @@ class PloterService:
 
         return fig
 
-    @st.cache_data
+    #@st.cache_data
     def plot_area(_self, df, col):
         """
         Plots an area graph.
@@ -190,7 +190,8 @@ class PloterService:
                       height=PloterService._FIGURE_HEIGHT,
                       markers=True)
 
-        fig.update_layout(title=PloterService._FIGURE_TITLE_LAYOUT, legend=PloterService._FIGURE_LEGEND)
+        fig.update_layout(title=PloterService._FIGURE_TITLE_LAYOUT)
+        fig.update_layout(showlegend=False)
         fig.update_layout(barmode='overlay')
         fig.update_traces(stackgroup=None, fill='tozeroy')
         fig.update_xaxes(title=None)
