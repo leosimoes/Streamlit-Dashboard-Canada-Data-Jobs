@@ -20,12 +20,16 @@ with st.container():
     st.header('Canada Data Jobs 2024')
     st.write('*Author: Leonardo Simões*')
 
+    st.divider()
+
     metrics_line = ploter_service.create_metrics_line(df)
     metrics_cols = st.columns(ploter_service.create_metrics_cols_size(metrics_line))
 
     for i in range(len(metrics_line)):
         with metrics_cols[i]:
             st.metric(label=metrics_line[i][0], value=metrics_line[i][1])
+
+    st.divider()
 
     # First Line
     st_col_1, st_col_2, st_col_3 = st.columns(3)
@@ -57,3 +61,5 @@ with st.container():
         # Plot funil
         fig_5 = ploter_service.plot_funnel(df, 'experienceLevel')
         st.plotly_chart(fig_5, theme="streamlit", use_container_width=True)
+
+    st.divider()
