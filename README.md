@@ -5,6 +5,12 @@ Project to display information about Data Science job openings in Canada in earl
 
 To run the project locally, type `streamlit run Dashboard.py` in the terminal.
 
+To access the application page: https://canadadatajobs.streamlit.app/
+
+
+## Dashboard
+![Image-Dashboard-CanadaDataJobs](static/Image-Dashboard-CanadaDataJobs.jpg)
+
 
 ## References
 kaggle - Linkedin Canada: Data Science Jobs 2024

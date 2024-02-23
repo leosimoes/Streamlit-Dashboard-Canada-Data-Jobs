@@ -5,6 +5,12 @@ Projeto para exibir informações sobre vagas de empregos de Data Science no Can
 
 Para executar o projeto localmente, digite `streamlit run Dashboard.py`no terminal.
 
+Para acessar a página do aplicativo: https://canadadatajobs.streamlit.app/
+
+
+## Dashboard
+![Image-Dashboard-CanadaDataJobs](static/Image-Dashboard-CanadaDataJobs.jpg)
+
 
 ## Referências
 kaggle - Linkedin Canada: Data Science Jobs 2024
