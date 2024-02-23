@@ -69,8 +69,7 @@ class PloterService:
 
         return df_counted
 
-
-    #@st.cache_data
+    @st.cache_data
     def plot_bar(_self, df, col, is_reversed=False):
         """
         Plots a bar chart.
@@ -106,7 +105,7 @@ class PloterService:
 
         return fig
 
-    # @st.cache_data
+    @st.cache_data
     def plot_pie(_self, df, col):
         """
         Plots a pie chart.
@@ -116,14 +115,12 @@ class PloterService:
         col -- string
         """
         df_count = _self._count_grouping(df, [col])
-        #extra_data = ('Percentage')
         colors_list = ['white', 'silver', 'skyblue']
         title = PloterService._TITLE_BY_COLUMN.get(col)
 
         fig = px.pie(df_count,
                      names=col,
                      values='Quantity',
-                     # hover_data=extra_data,
                      color=col,
                      color_discrete_sequence=colors_list,
                      title=title,
@@ -135,7 +132,7 @@ class PloterService:
 
         return fig
 
-    # @st.cache_data
+    @st.cache_data
     def plot_funnel(_self, df, col):
         """
         Plots a funnel chart.
@@ -163,14 +160,12 @@ class PloterService:
         # fig.update_layout(funnelgap=0.5)
         fig.update_layout(showlegend=False)
         fig.update_traces(marker_line_color='white', marker_line_width=0.5)
-        #fig.update_traces(textposition='inside', textinfo='label+value')
-        #fig.update_traces(textposition='outside', textinfo='label+value')
-        #fig.update_yaxes(visible=False, showticklabels=False)
         fig.update_xaxes(title=None)
         fig.update_yaxes(title=None)
+
         return fig
 
-    # @st.cache_data
+    @st.cache_data
     def plot_area(_self, df, col):
         """
         Plots an area graph.
