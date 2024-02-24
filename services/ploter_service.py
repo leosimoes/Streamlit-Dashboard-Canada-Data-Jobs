@@ -26,7 +26,7 @@ class PloterService:
         df -- DataFrame
         """
         return (
-            ('Professionals', df.shape[0]),
+            ('Job Openings', df.shape[0]),
             ('Roles', df['title'].nunique()),
             ('Work Types', df['workType'].nunique()),
             ('Sectors', df['sector'].nunique()),
